@@ -1,10 +1,9 @@
 {
   "name": "lwq",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "my first npm",
   "main": "dist/index.js",
   "scripts": {
-    
     "build": "tsc -p .",
     "rebuild": "npm run clean && npm run lint && npm run build",
     "test": "echo See directory sources/tests",
@@ -12,7 +11,7 @@
     "lint": "tslint --project tslint.json"
   },
   "bin": {
-    "lwq": "./lib/lwq.js"
+    "lwq": "./lib/index.js"
   },
   "files": [
     "lib"
@@ -26,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/1o1w1/lwq/issues"
   },
-  "homepage": "https://github.com/1o1w1/lwq#readme"
+  "homepage": "https://github.com/1o1w1/lwq#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "http-proxy-middleware": "^0.19.1",
+    "path": "^0.12.7",
+    "serve-index": "^1.9.1"
+  }
 }
