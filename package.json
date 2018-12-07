@@ -8,7 +8,8 @@
     "rebuild": "npm run clean && npm run lint && npm run build",
     "test": "echo See directory sources/tests",
     "clean": "rm -rf dist",
-    "lint": "tslint --project tslint.json"
+    "lint": "tslint --project tslint.json",
+    "dev": " node --inspect-brk=12345 ./lib/index.js"
   },
   "bin": {
     "lwq": "./lib/index.js"
@@ -32,5 +33,9 @@
     "http-proxy-middleware": "^0.19.1",
     "path": "^0.12.7",
     "serve-index": "^1.9.1"
+  },
+  "lwq":{
+    "saveJson":false,
+    "enableLocal": true
   }
 }
