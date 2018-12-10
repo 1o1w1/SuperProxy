@@ -35,7 +35,16 @@
     "serve-index": "^1.9.1"
   },
   "lwq":{
-    "saveJson":false,
-    "enableLocal": true
+    "//'save'|'local'|'proxy'":"",
+    "mode":"local",
+    "proxyTable":{
+      "/pwap":{
+        "target":"http://47.94.224.111:9017/",
+        "pathRewrite": {"^/pwap" : ""},
+        "logLevel": "debug",
+        "changeOrigin": true
+      }
+    }
+   
   }
 }
