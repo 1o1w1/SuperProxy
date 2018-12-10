@@ -58,6 +58,9 @@ function proxyLocalJson(options) {
       res.set("Content-Type", "application/json;charset=UTF-8");
       res.set("Access-Control-Allow-Origin", req.rawHeaders[num]);
       res.set("Access-Control-Allow-Credentials", true);
+      res.set("Access-Control-Allow-Methods", "*");
+      res.set("Access-Control-Allow-Headers", "Content-Type,Access-Token");
+      res.set("Access-Control-Expose-Headers", "*");
       if (err) {
         console.log(err);
         res.status(404).end();

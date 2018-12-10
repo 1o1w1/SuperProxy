@@ -1,6 +1,6 @@
 {
   "name": "@1o1w1/lwq",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "my first npm",
   "main": "dist/index.js",
   "scripts": {
@@ -9,13 +9,13 @@
     "test": "echo See directory sources/tests",
     "clean": "rm -rf dist",
     "lint": "tslint --project tslint.json",
-    "dev": " node --inspect-brk=12345 ./lib/index.js"
+    "dev": " node --inspect-brk=12345 ./src/index.js"
   },
   "bin": {
     "lwq": "./src/index.js"
   },
   "files": [
-    "lib"
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -34,17 +34,18 @@
     "path": "^0.12.7",
     "serve-index": "^1.9.1"
   },
-  "lwq":{
-    "//'save'|'local'|'proxy'":"",
-    "mode":"local",
-    "proxyTable":{
-      "/pwap":{
-        "target":"http://47.94.224.111:9017/",
-        "pathRewrite": {"^/pwap" : ""},
+  "lwq": {
+    "//'save'|'local'|'proxy'": "",
+    "mode": "local",
+    "proxyTable": {
+      "/pwap": {
+        "target": "http://47.94.224.111:9017/",
+        "pathRewrite": {
+          "^/pwap": ""
+        },
         "logLevel": "debug",
         "changeOrigin": true
       }
     }
-   
   }
 }
