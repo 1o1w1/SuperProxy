@@ -1,6 +1,6 @@
 {
   "name": "@1o1w1/lwq",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "my first npm",
   "main": "dist/index.js",
   "scripts": {
