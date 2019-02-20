@@ -5,7 +5,7 @@ my first npm
 #  用法
  package.json中添加配置
 
-  "lwq": {
+  "superproxy": {
     //save|local|proxy
     "mode": "local",
     "proxyTable": {

@@ -31,7 +31,7 @@
 
 
 module.exports = {
-	"lwq":{
+	"superproxy":{
 		"//'save'|'local'|'proxy'":"",
 		"mode":"local",
 		"proxyTable":{

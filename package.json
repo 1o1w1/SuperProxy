@@ -1,6 +1,6 @@
 {
-  "name": "@1o1w1/lwq",
-  "version": "1.0.5",
+  "name": "@1o1w1/superproxy",
+  "version": "1.0.0",
   "description": "my first npm",
   "main": "dist/index.js",
   "scripts": {
@@ -12,21 +12,21 @@
     "dev": " node --inspect-brk=12345 ./src/index.js"
   },
   "bin": {
-    "lwq": "./src/index.js"
+    "1o1w1-superproxy": "./src/index.js"
   },
   "files": [
     "src"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/1o1w1/lwq.git"
+    "url": "git+ssh://git@github.com/1o1w1/superproxy.git"
   },
   "author": "lwq",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/1o1w1/lwq/issues"
+    "url": "https://github.com/1o1w1/superproxy/issues"
   },
-  "homepage": "https://github.com/1o1w1/lwq#readme",
+  "homepage": "https://github.com/1o1w1/superproxy#readme",
   "dependencies": {
     "express": "^4.16.4",
     "fs": "0.0.1-security",
@@ -34,7 +34,7 @@
     "path": "^0.12.7",
     "serve-index": "^1.9.1"
   },
-  "lwq": {
+  "superproxy": {
     "//'save'|'local'|'proxy'": "",
     "mode": "local",
     "proxyTable": {

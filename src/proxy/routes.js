@@ -6,7 +6,7 @@ var proxyMiddleware = require("http-proxy-middleware");
 
 const cwd = process.cwd();
 // var appPath = path.resolve(__dirname,'../static');
-var jsonPath = path.join(cwd, "./lwq");
+var jsonPath = path.join(cwd, "./superproxy");
 var packagePath = path.join(cwd, "./package.json");
 let packageJsonBuffer;
 try {
@@ -16,7 +16,7 @@ try {
   // packageJsonBuffer = require('./config.js')
 }
 
-var packageJson = JSON.parse(packageJsonBuffer).lwq;
+var packageJson = JSON.parse(packageJsonBuffer).superproxy;
 var proxyTable = packageJson.proxyTable;
 
 module.exports = function(app) {
