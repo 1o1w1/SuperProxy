@@ -48,18 +48,22 @@ function proxyLocalJson(options) {
 
     console.log("proxyLocalJson:" + url + "===>" + localJson);
     fs.readFile(path.join(jsonPath, localJson), "utf-8", function(err, result) {
-      let num;
+      let Origin, AccessControlRequestHeaders;
       req.rawHeaders.forEach((element, i) => {
         if (element === "Origin") {
-          num = i + 1;
+          Origin = req.rawHeaders[i + 1];
+        }
+        if (element === "Access-Control-Request-Headers") {
+          AccessControlRequestHeaders = req.rawHeaders[i + 1];
         }
       });
 
       res.set("Content-Type", "application/json;charset=UTF-8");
-      res.set("Access-Control-Allow-Origin", req.rawHeaders[num]);
+      res.set("Access-Control-Allow-Origin", Origin);
       res.set("Access-Control-Allow-Credentials", true);
       res.set("Access-Control-Allow-Methods", "*");
-      res.set("Access-Control-Allow-Headers", "Content-Type,Access-Token");
+      res.set("Access-Control-Allow-Headers", AccessControlRequestHeaders);
+      // res.set("Access-Control-Allow-Headers", "*");
       res.set("Access-Control-Expose-Headers", "*");
       if (err) {
         console.log(err);
